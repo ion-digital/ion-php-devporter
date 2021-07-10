@@ -7,7 +7,6 @@ namespace \A\Fake\Token;
  */
 use My\Classiness;
 use \Exception as Throwable;
-
 interface IInterface
 {
     /**
@@ -16,11 +15,8 @@ interface IInterface
      * 
      * @return ?string
      */
-    
     function setString($string);
-
 }
-
 class ClassA implements IInterface
 {
     const PRIVATE_CONSTANT = 1;
@@ -36,7 +32,6 @@ class ClassA implements IInterface
      * 
      * @return ?string
      */
-    
     public function setString($string = null)
     {
         $closure = function ($anotherString = null, $anotherInt = null) {
@@ -44,9 +39,7 @@ class ClassA implements IInterface
         };
         return $string;
     }
-
 }
-
 class ClassB extends ClassA implements IInterface
 {
     /**
@@ -55,35 +48,29 @@ class ClassB extends ClassA implements IInterface
      * 
      * @return ?string
      */
-    
     public function setString($string = null)
     {
         return $string;
     }
-    
     /**
      * method
      * 
      * 
      * @return int
      */
-    
     public function setInt($int)
     {
         return $int;
     }
-    
     /**
      * method
      * 
      * @return void
      */
-    
     public function returnVoid()
     {
         return;
     }
-
 }
 /**
  * function
@@ -91,42 +78,35 @@ class ClassB extends ClassA implements IInterface
  * 
  * @return ?string
  */
-
 function setString($string = null)
 {
     return (string) $string;
 }
-
 /**
  * function
  * 
  * 
  * @return int
  */
-
 function setInt($int)
 {
     return (int) $int;
 }
-
 /**
  * function
  * 
  * @return void
  */
-
 function returnVoid()
 {
     return;
 }
-
 /**
  * function
  * 
  * 
  * @return ?object
  */
-
 function setObject($obj1, $obj2)
 {
     $obj = $obj1;

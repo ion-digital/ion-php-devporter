@@ -5,7 +5,6 @@ namespace \A\Fake\Token;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 interface IInterface
 {
     /**
@@ -14,11 +13,8 @@ interface IInterface
      * 
      * @return ?string
      */
-    
     function setString($string);
-
 }
-
 class ClassA implements IInterface
 {
     /**
@@ -27,13 +23,10 @@ class ClassA implements IInterface
      * 
      * @return ?string
      */
-    
     public function setString($string)
     {
     }
-
 }
-
 class ClassB extends ClassA implements IInterface
 {
     /**
@@ -42,9 +35,7 @@ class ClassB extends ClassA implements IInterface
      * 
      * @return ?string
      */
-    
     public function setString($string)
     {
     }
-
 }

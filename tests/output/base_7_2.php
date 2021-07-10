@@ -7,13 +7,10 @@ namespace \A\Fake\Token;
  */
 use My\Classiness;
 use Throwable;
-
 interface IInterface
 {
     function setString(string $string) : ?string;
-
 }
-
 class ClassA implements IInterface
 {
     private const PRIVATE_CONSTANT = 1;
@@ -29,7 +26,6 @@ class ClassA implements IInterface
      * 
      * @return ?string
      */
-    
     public function setString(string $string = null) : ?string
     {
         $closure = function (string $anotherString = null, int $anotherInt = null) {
@@ -37,42 +33,34 @@ class ClassA implements IInterface
         };
         return $string;
     }
-
 }
-
 class ClassB extends ClassA implements IInterface
 {
     public function setString(string $string = null) : ?string
     {
         return $string;
     }
-    
     public function setInt(int $int) : int
     {
         return $int;
     }
-    
     public function returnVoid() : void
     {
         return;
     }
-
 }
 function setString(?string $string = null) : ?string
 {
     return (string) $string;
 }
-
 function setInt(?int $int) : int
 {
     return (int) $int;
 }
-
 function returnVoid() : void
 {
     return;
 }
-
 function setObject(?object $obj1, object $obj2) : ?object
 {
     $obj = (object) $obj1;
