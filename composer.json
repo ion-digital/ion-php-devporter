@@ -17,30 +17,26 @@
         "php trans porter",
         "php transpoter"
     ],    
-    "homepage": "https://bitbucket.org/justusmeyer/php-trans-porter",
+    "homepage": "https://github.com/ion-digital/ion-php-trans-porter",
     "license": "LGPL-3.0",    
     "authors": [
         {
             "name": "Justus Meyer",
             "role": "developer",
-            "homepage": "https://bitbucket.org/justusmeyer/",
-            "email": "justus@justusmeyer.com"
+            "homepage": "https://justusmeyer.com"
         }
     ],
-    "support": {
-        "issues": "https://bitbucket.org/justusmeyer/php-trans-porter/issues"
-    },  
     "suggest": {
         "nikic/php-parser": "Nikita Popov's PHP Parser is a fantastic tool for any project that needs to parse or generate PHP code - PHP Transporter is possible thanks to this project (thanks Nikita!)",
         "phing/phing": "Phing helps you to automate your build system (i.e. trans-porting to multiple versions of PHP)",
         "ion/auto-loader": "A small auto-loading library, compatible with Composer, that allows you to customise your auto-loading functionality."
     },
     "require": {
-        "php": "^7.1.3",
-        "nikic/php-parser": "^3.1"
+        "php": "^8.2",
+        "nikic/php-parser": "^4.17"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.2",
+        "phpunit/phpunit": "^10.4",
         "phing/phing": "2.*"
     },
     "autoload": {
