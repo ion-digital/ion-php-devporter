@@ -83,6 +83,20 @@ class Converter implements IConverter {
 
                     switch (static::getMinorVersion($this->getTargetVersion())) {
 
+                        // PHP 7.4
+
+                        case 4: {
+                            $result = Conversion::convertTo74($ast, static::getMajorVersion($this->getSourceVersion()), static::getMinorVersion($this->getSourceVersion()));
+                            break;
+                        }     
+
+                        // PHP 7.3
+
+                        case 3: {
+                            $result = Conversion::convertTo73($ast, static::getMajorVersion($this->getSourceVersion()), static::getMinorVersion($this->getSourceVersion()));
+                            break;
+                        }     
+
                         // PHP 7.2
 
                         case 2: {
@@ -109,6 +123,39 @@ class Converter implements IConverter {
                             }
                     }
                 };
+
+            // PHP 8.x
+
+            case 8: {
+
+                switch (static::getMinorVersion($this->getTargetVersion())) {
+
+                    // PHP 8.2
+
+                    case 2: {
+                            $result = Conversion::convertTo82($ast, static::getMajorVersion($this->getSourceVersion()), static::getMinorVersion($this->getSourceVersion()));
+                            break;
+                        }        
+                        
+                   // PHP 8.1
+
+                    case 1: {
+                            $result = Conversion::convertTo81($ast, static::getMajorVersion($this->getSourceVersion()), static::getMinorVersion($this->getSourceVersion()));
+                            break;
+                        }                            
+                    
+                    // PHP 8.0
+
+                    case 0: {
+                            $result = Conversion::convertTo80($ast, static::getMajorVersion($this->getSourceVersion()), static::getMinorVersion($this->getSourceVersion()));
+                            break;
+                        }
+
+                    default: {
+                            //TODO: throw exception
+                        }
+                }
+            };                
         }
 
 

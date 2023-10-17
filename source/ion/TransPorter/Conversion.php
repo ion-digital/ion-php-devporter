@@ -26,6 +26,7 @@ use \PhpParser\Node\Expr\Closure;
 use \PhpParser\Node\Expr\Cast\Object_;
 use \PhpParser\Node\Const_;
 use \PhpParser\Node\Stmt\ClassConst;
+use \PhpParser\Node\Expr\Variable;
 
 class Conversion {
 
@@ -37,7 +38,20 @@ class Conversion {
         if ($node instanceof ClassMethod || $node instanceof Function_) {
 
             foreach ($node->getParams() as $param) {
-                $params[$param->name] = $param->type;
+                //var_dump($param);
+
+                if(isset($param->name)) {             
+
+                    $params[$param->name] = $param->type;
+                    continue;                    
+                }
+
+                if(!isset($param->var) || !$param->var instanceof Variable) {
+
+                    continue;
+                }
+
+                $params[$param->var->name] = $param->type;              
             }
         }
 
@@ -104,7 +118,7 @@ class Conversion {
                             $paramNode->type = $paramNode->type->type;
                         }
 
-                        switch (strtolower($paramNode->type)) {
+                        switch (strtolower($paramNode->type ?? "")) {
                             case 'bool':
                             case 'float':
                             case 'string':
@@ -275,9 +289,44 @@ class Conversion {
 
     public static function convertTo72(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
 
-        // PHP 7.2 is the current base version so it stays unconverted
+        // PHP 8.2 is the current base version so it stays unconverted
 
         return $ast;
     }
+
+    public static function convertTo73(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
+
+        // PHP 8.2 is the current base version so it stays unconverted
+
+        return $ast;
+    }
+    
+    public static function convertTo74(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
+
+        // PHP 8.2 is the current base version so it stays unconverted
+
+        return $ast;
+    }
+    
+    public static function convertTo80(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
+
+        // PHP 8.2 is the current base version so it stays unconverted
+
+        return $ast;
+    }    
+
+    public static function convertTo81(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
+
+        // PHP 8.2 is the current base version so it stays unconverted
+
+        return $ast;
+    }
+    
+    public static function convertTo82(array &$ast, int $sourceMajorVersion, int $sourceMinorVersion = 0): array {
+
+        // PHP 8.2 is the current base version so it stays unconverted
+
+        return $ast;
+    }    
 
 }

@@ -1,5 +1,6 @@
 <?php
-namespace \A\Fake\Token;
+namespace A\Fake\Token;
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -107,7 +108,7 @@ function returnVoid() : void
  * 
  * @return ?object
  */
-function setObject($obj1, $obj2)
+function setObject($obj1, $obj2) : ?object
 {
     $obj = $obj1;
     return $obj1;

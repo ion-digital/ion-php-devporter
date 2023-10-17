@@ -1,5 +1,6 @@
 <?php
-namespace \A\Fake\Token;
+namespace A\Fake\Token;
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -67,7 +68,7 @@ class ClassB extends ClassA implements IInterface
      * 
      * @return void
      */
-    public function returnVoid()
+    public function returnVoid() : void
     {
         return;
     }
@@ -97,7 +98,7 @@ function setInt(int $int) : int
  * 
  * @return void
  */
-function returnVoid()
+function returnVoid() : void
 {
     return;
 }

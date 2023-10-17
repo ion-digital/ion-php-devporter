@@ -18,10 +18,10 @@ final class TransPorterConstants {
     const __APP_NAME = 'PHP Trans-Porter';
     
     const __MAJOR_VERSION = 0;
-    const __MINOR_VERSION = 0;
-    const __PATCH_VERSION = 17;
+    const __MINOR_VERSION = 1;
+    const __PATCH_VERSION = 1;
     
-    const __BASE_PHP_MAJOR_VERSION = 7;
+    const __BASE_PHP_MAJOR_VERSION = 8;
     const __BASE_PHP_MINOR_VERSION = 2;
     
     const __MIN_PHP_MAJOR_VERSION = 5;

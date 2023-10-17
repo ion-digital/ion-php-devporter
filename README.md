@@ -18,13 +18,16 @@ reasons :) ), I needed to find a way to stream-line my work-flow so that:
 
 ## Features
 
-PHP Trans Porter currently features back-porting for PHP versions 5.6 and 7.x (7.0, 7.1 and 7.2), as well as bulk transformations 
-(specify an input directory and an output directory, and all __.php__ files will be converted recursively).
+PHP Trans Porter currently features back-porting for PHP versions 5.6, 7.x (7.0 to 7.2), as well as bulk transformations (specify an input directory and an output directory, and all __.php__ files will be converted recursively).
 
-The utility tries to make the least amount of changes possible, but with the goal of generating source code that should not have 
-to be modified again.
+The utility tries to make the least amount of changes possible, but with the goal of generating source code that should not have to be modified again.
 
-The current base version is: _PHP 7.2_.
+The current base version is: _PHP 8.2_.
+
+Conversion features for PHP _7.3_ and above:
+
+* _None_ (yet!)
+
 
 Conversion features for PHP _7.2_ to PHP _7.1_:
 
@@ -59,8 +62,8 @@ To use the current stable version, add the following to download it straight fro
 
 ```
 "require": {
-    "php": ">=7.2",
-    "ion/php-trans-porter": "^0.0.19",
+    "php": ">=8.2",
+    "ion/php-trans-porter": "^0.1",
 }
 ```
 
@@ -68,13 +71,13 @@ To use the bleeding edge (development) version, add the following:
 
 ```
 "require": {
-    "php": ">=7.2",
+    "php": ">=8.2",
     "ion/php-trans-porter": "dev-default",	
 },
 "repositories": {
     {
-      "type": "hg",
-      "url": "https://bitbucket.org/justusmeyer/php-trans-porter/"
+      "type": "vcs",
+      "url": "https://github.com/ion-digital/ion-php-trans-porter"
     }
 }
 ```
@@ -99,12 +102,12 @@ Then run the following in the root directory of your project:
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://bitbucket.org/justusmeyer/php-trans-porter/downloads/?tab=tags "bitbucket.org"). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://https://github.com/ion-digital/ion-php-trans-porter/tags "bitbucket.org"). 
 
 
 ## Authors
 
-* **Justus Meyer** - *Initial work* - [BitBucket](https://bitbucket.org/justusmeyer), [Upwork](https://justusmeyer.com/upwork)
+* **Justus Meyer** - *Initial work* - [GitHub](https://justusmeyer.com/github), [Upwork](https://justusmeyer.com/upwork)
 
 ## License
 

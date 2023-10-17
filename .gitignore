@@ -3,4 +3,4 @@
 /nbproject/private/
 /autoloader.json
 /**/ion-auto-load*.php
-/tests/output/**
+/tests/output/**/
